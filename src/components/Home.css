@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.home{
+    height: 100vh;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+.home-content{
+    padding-top: 50px;
+    min-height: 86.2vh;
+}
+
+
+nav {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    /* box-shadow: 0 20px 90px -15px rgba(32, 8, 77, 0.8);  */
+}
+
+ul {
+    padding: 0;
+    margin: 0 0 0 50px;
+    list-style: none;
+}
+
+li {
+    float: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+} 
+
+.navbar img {
+    height: 40px;
+}
+
+.ieee-black {
+    margin: 6px;
+}
+
+nav a {
+    width: 100px;
+    display: flex;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-family: Quicksand;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+  }
+
+
+footer {
+    bottom: 0px;
+    background: rgb(58, 55, 55);
+    color: white;
+    font-weight: bolder;
+    padding: 1rem;
+    text-align: center;
+}

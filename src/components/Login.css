@@ -1,0 +1,90 @@
+.user_card {
+    height: 420px;
+    width: 360px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+}
+
+.brand_logo_container {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    top: -75px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 5px;
+    text-align: center;
+}
+
+.brand_logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.form_container {
+    margin-top: 50px;
+    padding-inline: 10px;
+}
+
+.login_btn {
+    width: 100%;
+    margin-top: 20px;
+    background: #1b852c !important;
+    color: white !important;
+}
+
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+
+
+.input-group-text {
+    height: 100%;
+    background: none;
+    color: white;
+    outline: none !important;
+    /* border: none !important; */
+    border-bottom: 1px solid white !important;
+    margin-right: 1px;;
+}
+
+.input_user, .input_pass{
+    background-color: black;
+    color: white;
+    
+    border: none;
+    
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+}
+
+.input_user:focus,
+.input_pass:focus {
+    color: white;
+
+    background-color: black;
+
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c0392b !important;
+}
