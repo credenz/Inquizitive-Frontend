@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, NavbarBrand, Row } from "reactstrap";
+import './QuestionComponent.css';
 
 function Question() {
     const [ans, setAns] = useState(null);
@@ -8,16 +9,16 @@ function Question() {
         <>
             <Navbar fixed='top' color='dark' dark >
                 <NavbarBrand href="/"><img src='../images/CTDlogo.png' width='75px' ></img></NavbarBrand>
-                <h4 style={{ color: 'white' }}>INQUIZITIVE</h4>
-                <div style={{ color: 'white' }}>Time: 0:47</div>
+                <h4 className='name' >INQUIZITIVE</h4>
+                <div className='name' >Time: 0:47</div>
             </Navbar>
-            <Container style={{ marginTop: '90px', marginBottom: '75px' }}>
+            <Container className='content' >
                 <Row>
                     <Col>
                         <h2>Question: 3</h2>
                     </Col>
                     <Col>
-                        <div style={{ float: 'right' }}>
+                        <div className='circletimer' >
                             <CountdownCircleTimer
                                 onComplete={(time) => { console.log(time) }}
                                 isPlaying
