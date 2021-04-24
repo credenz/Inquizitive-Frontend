@@ -7,6 +7,7 @@ import {
 import Home from "./components/Home";
 import "./App.css";
 import Instructions from "./components/Instructions";
+import Question from "./components/Questions/QuestionComponent";
 const App = () => {
   return (
     <Router>
@@ -16,6 +17,9 @@ const App = () => {
         </Route>
         <Route exact path="/instructions">
           <Instructions />
+        </Route>
+        <Route exact path="/questions">
+          <Question/>
         </Route>
         <Redirect/>
       </Switch>

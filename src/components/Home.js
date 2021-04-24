@@ -1,5 +1,3 @@
-// import ieeeBlack from "../images/ieee_black.png";
-// import PISB from "../images/PISB.png";
 import Login from './Login';
 import BackGround from './Background';
 import './Home.css';

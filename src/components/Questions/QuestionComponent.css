@@ -1,0 +1,16 @@
+body{
+    background-color:white;
+}
+
+.name {
+    color: white;
+}
+
+.content {
+    margin-top: 90px;
+    margin-bottom: 75px;
+}
+
+.circletimer {
+    float: right;
+}
