@@ -1,13 +1,14 @@
-body{
-    background-color:white;
-}
 
 .name {
     color: white;
 }
 
+p{
+    color: white;
+}
+
 .content {
-    margin-top: 90px;
+    margin-top: 150px;
     margin-bottom: 75px;
 }
 
