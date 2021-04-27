@@ -1,17 +1,38 @@
-import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Question from './components/Question/QuestionComponent';
-
-function App() {
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import Home from "./components/Home";
+import "./App.css";
+import Instructions from "./components/Instructions";
+import Question from "./components/Questions/QuestionComponent";
+import Endpage from "./components/Endpage";
+import Instruction from "./components/Instruction";
+const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
-        <Route exact path="/questions">
-          <Question />
+        <Route exact path="/">
+          <Home />
         </Route>
+        <Route exact path="/instructions">
+          <Instructions />
+        </Route>
+        <Route exact path="/questions">
+          <Question/>
+        </Route>
+        <Route exact path="/endpage">
+          <Endpage/>
+        </Route>
+        <Route exact path="/ins">
+          <Instruction/>
+        </Route>
+        <Redirect/>
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;
