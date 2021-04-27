@@ -1,0 +1,38 @@
+
+
+.left{
+    margin-top: auto;
+    margin-bottom: auto;
+    /* background: #f39c12; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 80%;
+}
+
+
+.left h2 {
+    color: white;
+    font-family: Quicksand;
+    font-size: 30px;
+    font-style: italic;
+}
+
+
+.left h1 {
+    color: white;
+    font-family: Quicksand;
+    font-size: 70px;
+}
