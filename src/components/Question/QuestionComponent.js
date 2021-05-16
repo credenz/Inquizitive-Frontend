@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, NavbarBrand, Row } from "reactstrap";
 import './QuestionComponent.css';
+import ctdlogo from "../../images/ctd.png";
 
 function Question() {
     const [ans, setAns] = useState(null);
     return (
-        <>
+        <div className='backgd'>
             <Navbar fixed='top' color='dark' dark >
-                <NavbarBrand href="/"><img src='../images/CTDlogo.png' width='75px' ></img></NavbarBrand>
+                <NavbarBrand href="/"><img src={ctdlogo} width='75px' ></img></NavbarBrand>
                 <h4 className='name' >INQUIZITIVE</h4>
                 <div className='name' >Time: 0:47</div>
             </Navbar>
             <Container className='content' >
                 <Row>
-                    <Col>
-                        <h2>Question: 3</h2>
+                    <Col xs='8'>
+                        <h2>Question 3</h2>
                     </Col>
-                    <Col>
+                    <Col xs='4'>
                         <div className='circletimer' >
                             <CountdownCircleTimer
                                 onComplete={(time) => { console.log(time) }}
@@ -25,6 +26,7 @@ function Question() {
                                 duration={30}
                                 size={50}
                                 strokeWidth={6}
+                                trailColor={'rgba(255,255,255,0.3)'}
                                 rotation='counterclockwise'
                                 colors={[
                                     ['#004777', 0.33],
@@ -49,7 +51,7 @@ function Question() {
                         <Form onSubmit={(e) => { console.log('submit!', e) }}>
                             <FormGroup>
                                 <Label htmlFor='ans'><b>Ans :</b></Label>
-                                <Input type='textarea' id='ans' name='ans' placeholder='Your Answer' innerRef={(input) => setAns(input)}></Input>
+                                <Input type='text' id='ans' name='ans' placeholder='Your Answer' innerRef={(input) => setAns(input)}></Input>
                             </FormGroup>
                             <FormGroup>
                                 <Button className='float-right' type='submit' value='submit' color='primary'>SUBMIT</Button>
@@ -61,7 +63,7 @@ function Question() {
                     <Button color='danger' className='ml-auto'>End Test</Button>
                 </Navbar>
             </Container>
-        </>
+        </div>
     );
 }
 
