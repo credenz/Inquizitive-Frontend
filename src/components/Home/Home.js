@@ -1,5 +1,5 @@
-import Login from './Login';
-import BackGround from './Background';
+import Login from './Login/Login';
+import BackGround from './Background/Background';
 import './Home.css';
 
 // import "../App.css";
@@ -50,9 +50,8 @@ import './Home.css';
 //   );
 // };
 
-import "../App.css";
-import Navbar from "./Navbar";
-import CTD from './CTD';
+import Navbar from "./Navbar/Navbar";
+import CTD from './CTD/CTD';
 
 const Home = () => {
   return (
@@ -60,15 +59,15 @@ const Home = () => {
       <Navbar />
       <BackGround />
       <div className="home-content row text-center">
-        <div className="left col-lg-6 p-5">
-          <CTD/>
+        <div className="left col-lg-6">
+          <CTD />
         </div>
 
-        <div className="col-lg-6 p-5 text-center">
+        <div className="left col-lg-6 text-center">
           <Login />
         </div>
       </div>
-      <footer>PISB WEB TEAM</footer>
+      <footer className='' >PISB WEB TEAM</footer>
     </div>
   );
 };

@@ -4,12 +4,12 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import "./App.css";
-import Instructions from "./components/Instructions";
-import Question from "./components/Questions/QuestionComponent";
-import Endpage from "./components/Endpage";
-import Instruction from "./components/Instruction";
+import Instructions from "./components/Instructions/Instructions";
+import Question from "./components/Question/QuestionComponent";
+import Endpage from "./components/Endpage/Endpage";
+import Instruction from "./components/Instructions/Instruction";
 const App = () => {
   return (
     <Router>
