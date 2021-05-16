@@ -3,10 +3,25 @@
 }
 
 .content {
-    margin-top: 90px;
+    color: white;
+    margin-top: 100px;
     margin-bottom: 75px;
+}
+
+.backgd {
+    background-image: url(../../images/questionbg.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: scroll;
 }
 
 .circletimer {
     float: right;
+}
+
+#ans {
+    background: rgba(0,0,0,0.6);
+    outline: white;
+    color: white;
 }
