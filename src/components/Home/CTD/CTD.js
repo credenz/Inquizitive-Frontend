@@ -3,7 +3,7 @@ import ctdLogo from "../../../images/ctd.png";
 
 const CTD = () => {
     return (
-        <div>
+        <div className='ctdlogo'>
             <img src={ctdLogo} alt="logo" />
             <h2>presents</h2>
             <h1>InQuizitive</h1>
