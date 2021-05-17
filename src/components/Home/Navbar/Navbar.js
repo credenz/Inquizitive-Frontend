@@ -14,14 +14,14 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto flex-nowrap">
+          <ul className="navbar-nav d-flex justify-content-end ms-auto">
             <li>
               <NavLink to='/instructions' className='nav-item  w-5 m-3 p-0'> Instructions </NavLink>
             </li>
             <li className='nav-item w-5'>
               <NavLink to='/team' className='m-3 p-0'> Our Team </NavLink>
             </li>
-            <li className='nav-item w-5 ieee-black'>
+            <li className='nav-item ieee-black align-middle'>
               <img src={ieeeBlack}></img>
             </li>
           </ul>
