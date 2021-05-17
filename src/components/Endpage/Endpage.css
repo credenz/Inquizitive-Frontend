@@ -1,12 +1,21 @@
 .tick{
     display: block;
+    
+    margin-top: 50px;
     margin-left: auto;
+    margin-bottom: 50px;
     margin-right: auto;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+
 }
 .endpage{
     position: relative;
     top : 100px;
     border-style: double;
+    
+
+}
+.endpage{
+     background-image: url(../../images/questionbg.jpg);
 }
