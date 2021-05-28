@@ -3,10 +3,10 @@
     background-image: url(../../images/questionbg.jpg);
     /* position: relative;
     margin : 3vh  4vw  3vh 4vh ; */
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     /* margin-left: auto ;
     margin-right: auto; */
   /* bring your own prefixes */
@@ -32,15 +32,18 @@
    
 }
 .buttn{
-    margin:20px 20px 20px 20px
+    margin:20px 20px 20px 20px;
+    padding-bottom: 20px;
 }
 .text{
     margin:40px 20px 40px 20px
 
 }
 .pisb{
-    height: 50px;
+    height: 60px;
     width: auto;
+    padding-top: 1vh;
+    padding-left: 2vw;
 }
 .page-footer{
 background-color: #333;
@@ -48,4 +51,12 @@ background-color: #333;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.main-int{
+    margin-top : 5vh;
+    padding-top: 1vh;
+}
+.inqu{
+     height: 60px;
+    width: auto;
 }

@@ -6,7 +6,11 @@ import ieee from "../../images/IEEE White.png";
 const Endpage = () => {
     return (
       <div>
-        <nav>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        {/* <nav>
           <div className="nav-wrapper grey darken-4 ">
             <div className="containe">
               <a href="" className="brand-logo ">
@@ -17,7 +21,7 @@ const Endpage = () => {
               </div>
             </div>
           </div>
-        </nav>
+        </nav> */}
 
         <div className="container endpage grey lighten-4">
           <main className="container box">
@@ -26,12 +30,8 @@ const Endpage = () => {
                 <img className="tick center" src={Tick} />
               </div>
               <div className="center white-text">
-                  <h4>
-                      Your Response was submitted successfully
-                  </h4>
-                  <h4>
-                      Thank You
-                  </h4>
+                <h4>Your Response was submitted successfully</h4>
+                <h4>Thank You</h4>
               </div>
               {/* <div className="row s4 offset-s4">
                 <h4 className="center">
