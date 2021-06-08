@@ -54,7 +54,7 @@ const Login = () => {
           </div> */}
           <div className="form_container">
           <div className="login">
-            <h2>Login</h2>
+            {/* <h2>Login</h2> */}
           </div>
             <label className="d-flex justify-content-center text-light">
               {" "}

@@ -34,13 +34,13 @@
   /* justify-content: space-between 2px; */
   position: fixed;
   max-width: 100%;
-  width: 350px;
+  width: 330px;
   padding: 20px;
   margin: 20px;
   flex-direction: column;
   line-height: 45px;
   align-items: center;
-  margin-top: -440px;
+  margin-top: -400px;
   margin-left: 130px;
   /* border-left: 3px solid white; */
   /* border-right: 3px solid white; */
