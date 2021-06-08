@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home/Home";
 import "./App.css";
-import Instructions from "./components/Instructions/Instructions";
 import Question from "./components/Question/QuestionComponent";
 import Endpage from "./components/Endpage/Endpage";
 import Instruction from "./components/Instructions/Instruction";
@@ -16,9 +15,6 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Home />
-        </Route>
-        <Route exact path="/instructions">
-          <Instructions />
         </Route>
         <Route exact path="/questions">
           <Question/>

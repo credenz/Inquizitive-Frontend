@@ -1,0 +1,28 @@
+.navbar {
+    background: black;
+}
+
+.nav-item::hover {
+    text-decoration: none;
+}
+
+.nav-item {
+  width: 100px;
+  display: flex;
+  padding: 20px 15px;
+  font-family: Quicksand;
+  color: white;
+  font-weight: bolder;
+  /* text-align: center; */
+}
+
+.logo{
+  filter: brightness(170%);
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    margin-bottom: 60px;
+  }
+
+}
