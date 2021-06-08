@@ -8,20 +8,43 @@
     margin-bottom: 75px;
 }
 
+@media (min-width: 992px) {
+    .content {
+        max-width: 720px;
+    }
+
+    .formcont {
+        max-width: 720px;
+    }
+}
+
 .backgd {
     background-color: rgba(16, 31, 71, 0.404);
     min-height: 100vh;
-    background-size: cover;
-    background-repeat: repeat-y;
     overflow: scroll;
 }
 
 .circletimer {
     float: right;
+    margin-bottom: 10px;
 }
 
 #ans {
     background: rgba(0,0,0,0.6);
     outline: white;
     color: white;
+}
+
+.descp {
+    font-size: x-large;
+    height: calc(100vh - 400px);
+    overflow-y: auto;
+}
+
+.ansform {
+    bottom:0;
+}
+
+.formcont {
+    margin-bottom:75px;
 }
