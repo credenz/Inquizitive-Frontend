@@ -13,10 +13,9 @@ function Question() {
     const [description, setDescription] = useState(' ');
     const [ans, setAns] = useState(" ");
 
-    let token = 'b6c6700def6c372914267ddf6fae233caee84c375ace8cff3bdf522f742ea589';
-
     useEffect(() => {
         console.log('Hi!')
+        let token = localStorage.getItem('jwtToken');
         axios.get('http://127.0.0.1:8000/quiz/question/', {
             headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' }
         })
@@ -38,6 +37,7 @@ function Question() {
     const send = (e) => {
         if (e) e.preventDefault();
         var bodyFormData = new FormData();
+        let token = localStorage.getItem('jwtToken');
         bodyFormData.append('answer', ans);
         axios.post('http://127.0.0.1:8000/quiz/response/', { "answer": ans.toString() }, {
             headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
