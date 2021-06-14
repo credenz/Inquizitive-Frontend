@@ -11,7 +11,7 @@ function Question() {
     const [redirect, setRedirect] = useState(0);
     const [title, setTitle] = useState(0);
     const [description, setDescription] = useState(' ');
-    const [ans, setAns] = useState(" ");
+    const [ans, setAns] = useState("");
 
     useEffect(() => {
         console.log('Hi!')
@@ -36,10 +36,8 @@ function Question() {
 
     const send = (e) => {
         if (e) e.preventDefault();
-        var bodyFormData = new FormData();
         let token = localStorage.getItem('jwtToken');
-        bodyFormData.append('answer', ans);
-        axios.post('http://127.0.0.1:8000/quiz/response/', { "answer": ans.toString() }, {
+        axios.post('http://127.0.0.1:8000/quiz/response/', { "answer": ans }, {
             headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
         })
             .then((res) => {
@@ -49,6 +47,7 @@ function Question() {
                     } else {
                         setTitle(res.data.data.number_of_question_solved);
                         setDescription(res.data.data.description);
+                        setAns("");
                     }
                 } else {
                     alert(res.statusText, res.status);
@@ -63,20 +62,20 @@ function Question() {
         return (
             <div className='backgd'>
                 <Navbar fixed='top' color='dark' dark >
-                    <NavbarBrand href="/"><img src={ctdlogo} width='75px' ></img></NavbarBrand>
+                    <NavbarBrand href="/"><img alt='logo' src={ctdlogo} width='75px' ></img></NavbarBrand>
                     <h4 className='name' >INQUIZITIVE</h4>
                     <div className='name' >Time: 0:47</div>
                 </Navbar>
                 <Container className='content' >
                     <Row>
                         <Col xs='8' className='title'>
-                            <h1 className='title' >Question {title + 1}</h1>
+                            <h1 className='title' >Question {title}</h1>
                         </Col>
                         <Col xs='4'>
                             <div className='circletimer' >
                                 <CountdownCircleTimer
                                     key={title ? title : 0}
-                                    onComplete={() => { }}
+                                    onComplete={() => { send(); }}
                                     isPlaying
                                     duration={30}
                                     size={75}
@@ -97,13 +96,16 @@ function Question() {
                     <Row>
                         <Col>
                             <div className='descp overflow-auto'>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula id urna in egestas. Sed sed mollis massa, eu euismod nibh. Aenean nec feugiat purus, faucibus ornare mauris. Duis placerat maximus tristique. Suspendisse lobortis lectus eget fermentum accumsan. Donec ullamcorper hendrerit enim, vitae malesuada enim vulputate eget. Phasellus nec ullamcorper quam, vel feugiat augue. Nulla mattis nibh eu ullamcorper efficitur. Quisque sit amet vulputate nisi, ac dignissim purus. Nulla interdum, est ut tincidunt hendrerit, quam eros congue nunc, id commodo ex leo quis metus. Fusce tincidunt semper rutrum. Nunc aliquam ultrices turpis eu luctus. Proin eros lorem, mollis id lectus non, volutpat rhoncus turpis.</p>
+                                <p>{description}</p>
                             </div>
                         </Col>
                     </Row>
 
                     <Navbar fixed='bottom' color='dark' dark expand="md">
-                        <Button color='danger' className='ml-auto'>End Test</Button>
+                        <Button onClick={() => {
+                            send();
+                            setRedirect(1);
+                        }} color='danger' className='ml-auto'>End Test</Button>
                     </Navbar>
                 </Container>
                 <Container className='formcont position-fixed fixed-bottom' >
@@ -112,7 +114,7 @@ function Question() {
                             <Form onSubmit={send} >
                                 <FormGroup>
                                     <Label htmlFor='ans'><b>Ans :</b></Label>
-                                    <Input type='text' id='ans' autoComplete='off' placeholder='Your Answer' innerRef={(input) => setAns(input)}></Input>
+                                    <Input type='text' id='ans' autoComplete='off' placeholder='Your Answer' value={ans} onChange={e => setAns(e.target.value)}></Input>
                                 </FormGroup>
                                 <Button className='float-right' type='submit' value='submit' color='primary'>SUBMIT</Button>
                             </Form>
