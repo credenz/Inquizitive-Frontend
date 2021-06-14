@@ -9,6 +9,9 @@
     width: 200px;
 
 }
+.white-text{
+    font-family: 'Open Sans', sans-serif;
+}
 .endpage{
     position: relative;
     top : 100px;
