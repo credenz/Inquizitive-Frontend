@@ -1,11 +1,13 @@
-import './CTD.css';
+import './CTDcopy.css';
 import Inq from "../../../images/inquizitive.png";
 const CTD = () => {
     return (
         <div className='ctdlogo'>
-            <img src={Inq} className="brand_logo brand_logo_container" alt="" srcset="" />
+            <div className="brand-logo-container">
+                <img src={Inq} className='brand-logo' alt="" />
+            </div>
             <h1>InQuizitive</h1>
-            <h8>A platform that feeds upon curiosity</h8>
+            <h6>A platform that feeds upon curiosity</h6>
         </div>
     )
 }

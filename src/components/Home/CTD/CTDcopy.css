@@ -1,0 +1,37 @@
+.ctdlogo{
+    height: 100%;
+}
+
+.brand-logo-container {
+    height: 120px;
+    width: 100%;
+    top: 25px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 40px;
+} 
+
+.brand-logo{
+    height: 100%;
+    width: auto;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+h1 {
+    width: 100%;
+    color: white;
+    font-family: Quicksand;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+h6{
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    font-family: Quicksand;
+    font-style: italic;
+    text-align: center;
+}

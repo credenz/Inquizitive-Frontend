@@ -1,0 +1,44 @@
+.login-container{
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    margin: 30px;
+}
+
+.login-title{
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-block: 10px;
+}
+
+.input-group-text {
+    height: 100%;
+    background: none;
+    color: white;
+}
+
+.input_user,
+.input_pass {
+  color: white !important;
+  background: none !important;
+  font-weight: bolder !important;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0px;
+}
+
+.login-btn-control{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-btn {
+    width: 150px;
+    
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    border: solid 2px white;
+}
