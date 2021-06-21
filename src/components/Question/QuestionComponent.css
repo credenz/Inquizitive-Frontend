@@ -1,5 +1,6 @@
 .name {
     color: white;
+    font-size: 2rem;
 }
 
 .content {
@@ -18,8 +19,20 @@
     }
 }
 
+@media (max-width: 474px) {
+	.content {
+		margin-top: 125px;
+	}
+}
+
+@media (max-width: 374px) {
+	.content {
+		margin-top: 175px;
+	}
+}
+
 .backgd {
-    background-color: rgba(16, 31, 71, 0.404);
+    background-color: #02061d;
     min-height: 100vh;
     overflow: scroll;
 }
@@ -47,4 +60,11 @@
 
 .formcont {
     margin-bottom:75px;
+}
+
+.inqzlogo {
+    height: 55px;
+    width: auto;
+    background: #ffffff;
+    border-radius: 50%;
 }

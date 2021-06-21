@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, NavbarBrand, Row } from "reactstrap";
-import './QuestionComponent.css';
-import ctdlogo from "../../images/ctd.png";
-import { useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Redirect } from 'react-router';
+import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, NavbarBrand, Row } from "reactstrap";
+import ctdlogo from "../../images/ctd.png";
+import Inq from "../../images/inquizitive.png";
+import PISB from "../../images/PISB.png";
+import './QuestionComponent.css';
 
 function Question() {
     const [redirect, setRedirect] = useState(0);
@@ -61,10 +62,10 @@ function Question() {
     } else {
         return (
             <div className='backgd'>
-                <Navbar fixed='top' color='dark' dark >
+                <Navbar fixed='top' color='black' dark >
                     <NavbarBrand href="/"><img alt='logo' src={ctdlogo} width='75px' ></img></NavbarBrand>
-                    <h4 className='name' >INQUIZITIVE</h4>
-                    <div className='name' >Time: 0:47</div>
+                    <div className='name' ><img src={Inq} className='inqzlogo' alt="" width='50px' height='50px' /><strong> INQUIZITIVE</strong></div>
+                    <div><img src={PISB} alt='PISB Logo' width="100px" className="logo"></img></div>
                 </Navbar>
                 <Container className='content' >
                     <Row>
@@ -101,7 +102,7 @@ function Question() {
                         </Col>
                     </Row>
 
-                    <Navbar fixed='bottom' color='dark' dark expand="md">
+                    <Navbar fixed='bottom' color='black' dark expand="md">
                         <Button onClick={() => {
                             send();
                             setRedirect(1);
