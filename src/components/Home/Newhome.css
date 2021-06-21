@@ -1,56 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-body{
-    font-family: 'Quicksand';
+body {
+  font-family: "Quicksand";
 }
 
 @keyframes animStar {
-    from {
-        transform: translateY(100px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
 }
 
-.dialogue-container{
-    width: 100%;
-    min-height: 80vh;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dialogue-container {
+  width: 100%;
+  min-height: 80vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-dialogue{
-    height: fit-content;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 30px;
-    padding: 30px;
+.home-dialogue {
+  height: fit-content;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 30px;
 }
 
 ::-webkit-scrollbar {
-    display: none;
-    width: 10px;
+  display: none;
+  width: 10px;
 }
 
 .foot {
-    bottom: 0px;
-    background: black;
-    color: white;
-    padding: 1.2rem;
-    text-align: center;
-    position: fixed;
-    width: 100%;
+  bottom: 0px;
+  background: black;
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
 }
 
-@media (max-width: 800px){
-    .home-dialogue{
-        margin-bottom: 150px;
-    }
-    .top{ 
-        margin-bottom: 20px;
-    }
+@media (max-width: 800px) {
+  .home-dialogue {
+    margin-bottom: 150px;
+  }
+  .top {
+    margin-bottom: 20px;
+  }
 }
-

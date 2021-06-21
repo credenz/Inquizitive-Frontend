@@ -4,6 +4,7 @@ import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Redirect } from "react-router-dom";
 import "./Logincopy.css";
 import Axios from "axios";
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,6 +20,8 @@ const Login = () => {
       password: password,
     };
 
+    console.log("Hi");
+
     Axios.post("http://127.0.0.1:8000/api/login/", data)
       .then((res) => {
         const token = res.data.token;
@@ -29,14 +32,9 @@ const Login = () => {
           setRedirect(true);
           setLoginStatus(true);
         }
-        if (token) {
-          Axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        } else {
-          delete Axios.defaults.headers.common["Authorization"];
-        }
       })
-
       .catch((err) => {
+        alert("Session expired. You have already attempted the quiz.");
         console.log(err);
       });
   };
