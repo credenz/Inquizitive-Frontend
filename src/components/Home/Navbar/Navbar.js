@@ -9,8 +9,7 @@ import "bootstrap/dist/js/bootstrap";
 const Nav = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark"
-      style={{ backgroundColor: "#000000" }}
+      className="navbar newnav navbar-expand-lg navbar-dark"
     >
       <NavbarBrand href="/">
         <img src={ctdlogo} className="main-logo" width="75px"></img>
@@ -33,15 +32,13 @@ const Nav = () => {
         <div className="navbar-nav">
           <NavLink
             to="/ins"
-            className="nav-item  w-5 m-3 p-0"
-            style={{ color: "#ffffff" }, {textDecoration: "none"}}
+            className="newnav-item  w-5 m-3 p-0"
           >
             Instructions
           </NavLink>
           <NavLink
             to="/team"
-            className="nav-item m-3 p-0"
-            style={{ color: "#ffffff" }, {textDecoration: "none"}}
+            className="newnav-item m-3 p-0"
           >
             Our Team
           </NavLink>

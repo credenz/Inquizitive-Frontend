@@ -2,7 +2,7 @@
     text-align: center;
     height: 100%;
     padding: 20px;
-    margin: 30px;
+    margin: 20px;
 }
 
 .login-title{
@@ -10,7 +10,7 @@
     width: 100%;
     text-align: center;
     font-size: 30px;
-    margin-block: 10px;
+    margin-block: 25px;
 }
 
 .input-group-text {
@@ -35,10 +35,10 @@
 }
 
 .login-btn {
-    width: 150px;
-    
+    width: 120px;
     background-color: black;
     color: rgb(255, 255, 255);
     font-weight: bolder;
     border: solid 2px white;
+    border-radius: 15px;
 }
