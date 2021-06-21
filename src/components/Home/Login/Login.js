@@ -4,6 +4,7 @@ import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Redirect } from "react-router-dom";
 import "./Logincopy.css";
 import Axios from "axios";
+import DjangoServerUrl from "../../../urls";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -22,7 +23,7 @@ const Login = () => {
 
     console.log("Hi");
 
-    Axios.post("http://127.0.0.1:8000/api/login/", data)
+    Axios.post(DjangoServerUrl + "api/login/", data)
       .then((res) => {
         const token = res.data.token;
         if (!res.status === 200) {
