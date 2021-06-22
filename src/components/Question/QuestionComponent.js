@@ -64,9 +64,9 @@ function Question() {
         return (
             <div className='backgd'>
                 <Navbar fixed='top' color='' dark className='MyNavs' >
-                    <NavbarBrand href="/"><img alt='logo' src={ctdlogo} width='75px' ></img></NavbarBrand>
+                    <div className='d-none d-md-block'><img alt='logo' src={ctdlogo} width='75px' ></img></div>
                     <div className='name' ><img src={Inq} className='inqzlogo' alt="" width='50px' height='50px' /><strong> INQUIZITIVE</strong></div>
-                    <div><img src={PISB} alt='PISB Logo' width="100px" className="logo"></img></div>
+                    <div className='d-none d-sm-block'><img src={PISB} alt='PISB Logo' width="100px" className="logo"></img></div>
                 </Navbar>
                 <Container className='content' >
                     <Row>
