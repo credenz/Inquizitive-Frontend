@@ -21,7 +21,6 @@
 h1 {
     width: 100%;
     color: white;
-    font-family: Quicksand;
     text-align: center;
     font-size: 50px;
     margin-top: 10px;
@@ -31,7 +30,6 @@ h6{
     font-size: 15px;
     width: 100%;
     color: white;
-    font-family: Quicksand;
     font-style: italic;
     text-align: center;
 }

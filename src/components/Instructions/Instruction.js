@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Router, Link } from "react-router-dom";
 import "./ins.css";
 import ctd from "../../images/ctd.png";
-import ieee from "../../images/IEEE White.png";
+import pisb from "../../images/PISB.png";
 import inquzi from "../../images/inquizitive.png";
 const Instruction = () => {
   const [isActive, setActive] = useState(false);
@@ -71,7 +71,7 @@ const Instruction = () => {
             <ul className="right hide-on-med-and-down">
               <li>
                 <a href="">
-                  <img src={ieee} className="ieee" />
+                  <img src={pisb} className="ieee logo" />
                 </a>
               </li>
               <li>
@@ -108,7 +108,7 @@ const Instruction = () => {
             <div className="">
               <p className="text">
                 <ol>
-                  <li>Participants can register online on the official CTD website.</li>
+                  <li>Before starting the quiz, make sure that you have a stable network.</li>
                   <li>Every participant can sign in only once. Once completed, you won't be able to sign in again.</li>
                   <li>Each question has a set time after which you won't be able to answer nor come back to it later again.</li>
                   <li>You can end test at any time using 'End Test' button.</li>
