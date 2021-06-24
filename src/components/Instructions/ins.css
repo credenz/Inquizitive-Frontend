@@ -1,6 +1,6 @@
 .cont {
   /* background-color: white; */
-  background-image: url(../../images/questionbg.jpg);
+    background-color: rgba(0, 0, 0, 0.486);
    position:  absolute;
     top: 15%;
     bottom :13%; 

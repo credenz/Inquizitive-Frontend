@@ -7,28 +7,7 @@
     color: white;
     margin-top: 100px;
     margin-bottom: 75px;
-}
-
-@media (min-width: 992px) {
-    .content {
-        max-width: 720px;
-    }
-
-    .formcont {
-        max-width: 720px;
-    }
-}
-
-@media (max-width: 474px) {
-	.content {
-		margin-top: 125px;
-	}
-}
-
-@media (max-width: 374px) {
-	.content {
-		margin-top: 175px;
-	}
+    max-width: 720px;
 }
 
 .backgd {
@@ -61,6 +40,7 @@
 .formcont {
     margin-bottom:75px;
     background-color: #02061d;
+    max-width: 720px;
 }
 
 .inqzlogo {
@@ -72,4 +52,20 @@
 
 .MyNavs {
 	background-color: black;
+}
+
+.title {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.quespin {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.subbutt {
+    width: 58px;
+    height: 24px;
 }

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Redirect } from 'react-router';
-import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, NavbarBrand, Row } from "reactstrap";
+import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, Row, Spinner } from "reactstrap";
 import ctdlogo from "../../images/ctd.png";
 import Inq from "../../images/inquizitive.png";
 import PISB from "../../images/PISB.png";
@@ -14,20 +14,22 @@ function Question() {
     const [title, setTitle] = useState(0);
     const [description, setDescription] = useState(' ');
     const [ans, setAns] = useState("");
+    const [sending, setSending] = useState(false);
 
     useEffect(() => {
-        console.log('Hi!')
+        setSending(true);
         let token = localStorage.getItem('jwtToken');
         axios.get(DjangoServerUrl + 'quiz/question/', {
             headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' }
         })
             .then((res) => {
-                if (res.status == 200) {
+                if (res.status === 200) {
                     if (res.data === 'logout') {
                         setRedirect(1);
                     } else {
                         setTitle(res.data.data.number_of_question_solved);
                         setDescription(res.data.data.description);
+                        setSending(false);
                     }
                 } else {
                     alert(res.statusText, res.status);
@@ -36,20 +38,25 @@ function Question() {
             .catch((res) => alert(res));
     }, []);
 
-    const send = (e) => {
+    const send = (e = null, End = false) => {
         if (e) e.preventDefault();
         let token = localStorage.getItem('jwtToken');
+        setSending(true);
         axios.post(DjangoServerUrl + 'quiz/response/', { "answer": ans }, {
             headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
         })
             .then((res) => {
-                if (res.status == 200) {
+                if (res.status === 200) {
                     if (res.data === 'logout') {
                         setRedirect(1);
+                        axios.post(DjangoServerUrl + 'api/logout/', {}, {
+                            headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
+                        }).then().catch(e => alert(e));
                     } else {
                         setTitle(res.data.data.number_of_question_solved);
                         setDescription(res.data.data.description);
                         setAns("");
+                        setSending(false);
                     }
                 } else {
                     alert(res.statusText, res.status);
@@ -71,7 +78,7 @@ function Question() {
                 <Container className='content' >
                     <Row>
                         <Col xs='8' className='title'>
-                            <h1 className='title' >Question {title}</h1>
+                            Question {title}
                         </Col>
                         <Col xs='4'>
                             <div className='circletimer' >
@@ -107,6 +114,9 @@ function Question() {
                         <Button onClick={() => {
                             send();
                             setRedirect(1);
+                            axios.post(DjangoServerUrl + 'api/logout/', {}, {
+                                headers: { "Authorization": "token " + localStorage.getItem('jwtToken'), "Content-Type": "application/json" }
+                            }).then(r => console.log(r)).catch(e => alert(e));
                         }} color='danger' className='ml-auto'>End Test</Button>
                     </Navbar>
                 </Container>
@@ -118,7 +128,7 @@ function Question() {
                                     <Label htmlFor='ans'><b>Ans :</b></Label>
                                     <Input type='text' id='ans' autoComplete='off' placeholder='Your Answer' value={ans} onChange={e => setAns(e.target.value)}></Input>
                                 </FormGroup>
-                                <Button className='float-right' type='submit' value='submit' color='primary'>SUBMIT</Button>
+                                <Button className='float-right' type='submit' value='submit' color='primary'><div className='subbutt'>{sending ? <Spinner className='quespin' /> : 'SUBMIT'}</div></Button>
                             </Form>
                         </Col>
                     </Row>

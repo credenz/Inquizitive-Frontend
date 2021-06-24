@@ -107,35 +107,13 @@ const Instruction = () => {
           <main>
             <div className="">
               <p className="text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                et ipsum blanditiis culpa iure odit nihil alias vero nesciunt
-                quisquam a neque corporis doloremque quasi natus, sit dolorum
-                reiciendis laborum laboriosam fugit? Ipsam, vel ipsum? Esse,
-                reiciendis, facilis suscipit doloremque praesentium officia
-                fugiat placeat repellendus dignissimos repellat eveniet sed.
-                Minima. Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. At repudiandae quod consectetur magnam repellat aliquam!
-                Perspiciatis libero est facere, unde quas ipsum beatae repellat
-                praesentium eligendi ratione delectus sequi corrupti. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-                voluptas quas unde illo aliquam, ullam provident a aperiam
-                adipisci quis ut voluptate. Repellendus sunt hic ex, error quam
-                vero optio recusandae illo debitis ad molestias, harum nostrum
-                saepe, soluta aperiam? Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Saepe et ipsum blanditiis culpa iure odit
-                nihil alias vero nesciunt quisquam a neque corporis doloremque
-                quasi natus, sit dolorum reiciendis laborum laboriosam fugit?
-                Ipsam, vel ipsum? Esse, reiciendis, facilis suscipit doloremque
-                praesentium officia fugiat placeat repellendus dignissimos
-                repellat eveniet sed. Minima. Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit. At repudiandae quod consectetur
-                magnam repellat aliquam! Perspiciatis libero est facere, unde
-                quas ipsum beatae repellat praesentium eligendi ratione delectus
-                sequi corrupti. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Veritatis voluptas quas unde illo aliquam,
-                ullam provident a aperiam adipisci quis ut voluptate.
-                Repellendus sunt hic ex, error quam vero optio recusandae illo
-                debitis ad molestias, harum nostrum saepe, soluta aperiam?
+                <ol>
+                  <li>Participants can register online on the official CTD website.</li>
+                  <li>Every participant can sign in only once. Once completed, you won't be able to sign in again.</li>
+                  <li>Each question has a set time after which you won't be able to answer nor come back to it later again.</li>
+                  <li>You can end test at any time using 'End Test' button.</li>
+                  <li>Participants should not make spelling mistakes while writing answers, they will be considered as wrong answers.</li>
+                </ol>
               </p>
             </div>
             <div className="divider"></div>
