@@ -1,0 +1,25 @@
+.tick{
+    display: block;
+    
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+
+}
+.white-text{
+    font-family: 'Open Sans', sans-serif;
+}
+.endpage{
+    position: relative;
+    top : 100px;
+    border-style: double;
+    
+
+}
+.endpage{
+     background-image: url(../../images/questionbg.jpg);
+
+}
