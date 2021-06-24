@@ -3,6 +3,7 @@ import BackGround from "./Background/Background";
 import "./Newhome.css";
 import Navbar from "./Navbar/Navbar";
 import CTD from "./CTD/CTD";
+import Footer from "./Footer/Footer"
 
 const Home = () => {
   return (
@@ -17,9 +18,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer className="foot">
-        © PICT IEEE Student Branch | Developed by PISB Web Team
-      </footer>
+      <Footer/>
     </div>
   );
 };
