@@ -1,0 +1,85 @@
+.cont {
+  /* background-color: white; */
+  background-image: url(../../images/questionbg.jpg);
+   position:  absolute;
+    top: 15%;
+    bottom :13%; 
+    left:50%;
+    transform:translate(-50%,0);
+    overflow: scroll;
+
+    /* left: 50%;
+    transform: translate(-50%, -50%); */ 
+  /* margin-left: auto ;
+    margin-right: auto; */
+  /* bring your own prefixes */
+  /* position:relative; */
+  /* top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    /* margin: 5% 5% 5% %; */
+  /* display: block;
+    margin-left:auto;
+    margin-right: auto; */
+}
+.checkbox {
+  position: relative;
+  top: 1em;
+}
+.inqui {
+  padding: 15px;
+}
+.ieee {
+  height: 30px;
+  width: auto;
+}
+  .buttn {
+    margin: 20px 20px 5px 20px;
+    padding-bottom: 5px;
+    
+  }
+.text {
+  margin: 40px 20px 40px 20px;
+}
+.pisb {
+  height: 60px;
+  width: auto;
+  padding-top: 1vh;
+  padding-left: 2vw;
+}
+.page-footer {
+  /* background-color: #333; */
+  overflow:visible;
+  position: fixed;
+  /* height: 5em; */
+  bottom: 0;
+  width: 100%;
+}
+/* .page-footer{
+   position:relative;
+   
+   bottom:0;
+   width:100%;
+   height:60px;   
+   background:#6cf;
+}  */
+/* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main{
+    flex: 1 0 auto;
+} */
+
+.main-int {
+  /* margin-top: vh;
+  padding-top: vh; */
+}
+.inqu {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
