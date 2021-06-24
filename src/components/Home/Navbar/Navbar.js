@@ -33,15 +33,17 @@ const Nav = () => {
           <NavLink
             to="/ins"
             className="newnav-item  w-5 m-3 p-0"
+            style={{'textDecoration': 'none'}}
           >
             Instructions
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/team"
             className="newnav-item m-3 p-0"
+            style={{'textDecoration': 'none'}}
           >
             Our Team
-          </NavLink>
+          </NavLink> */}
           <NavbarBrand>
             <img src={PISB} width="100px" className="logo" style={{ color: "#ffffff"}}></img>
           </NavbarBrand>

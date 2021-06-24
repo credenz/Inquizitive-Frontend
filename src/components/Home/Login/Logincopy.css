@@ -1,22 +1,23 @@
-.login-container{
-    text-align: center;
-    height: 100%;
-    padding: 20px;
-    margin: 20px;
+.login-container {
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
 }
 
-.login-title{
-    color: #ffffff;
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    margin-block: 25px;
+.login-title {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 30px;
+  margin-block: 25px;
 }
 
 .input-group-text {
-    height: 100%;
-    background: none;
-    color: white;
+  height: 100%;
+  background: none;
+  color: white;
 }
 
 .input_user,
@@ -29,16 +30,21 @@
   border-radius: 0px;
 }
 
-.login-btn-control{
-    text-align: center;
-    margin-top: 30px;
+.login-btn-control {
+  text-align: center;
+  margin-top: 25px;
 }
 
 .login-btn {
-    width: 120px;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    font-weight: bolder;
-    border: solid 2px white;
-    border-radius: 15px;
+  width: 100px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: solid 2px white;
+  border-radius: 15px;
+}
+
+.login-btn:hover {
+  color: black;
+  background: white;
 }

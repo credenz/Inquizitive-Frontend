@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Logincopy.css";
 import Axios from "axios";
 import DjangoServerUrl from "../../../urls";
 
 const Login = () => {
+  const history = useHistory();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
-  const [loginStatus, setLoginStatus] = useState(false);
 
   Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
@@ -21,28 +21,22 @@ const Login = () => {
       password: password,
     };
 
-    console.log("Hi");
-
     Axios.post(DjangoServerUrl + "api/login/", data)
       .then((res) => {
         const token = res.data.token;
-        if (!res.status === 200) {
-          setLoginStatus(false);
-        } else {
-          localStorage.setItem("jwtToken", token);
-          setRedirect(true);
-          setLoginStatus(true);
-        }
+        localStorage.setItem("jwtToken", token);
+        Axios.defaults.headers["Authorization"] =
+          "Token " + localStorage.getItem("jwtToken");
+        history.push("/ins");
+        console.log(res.status);
+        console.log(localStorage.getItem("jwtToken"));
       })
       .catch((err) => {
-        alert("Session expired. You have already attempted the quiz.");
         console.log(err);
+        console.log(JSON.stringify(err));
+        alert(err.message);
       });
   };
-
-  if (redirect) {
-    return <Redirect to="/ins" />;
-  }
 
   return (
     <div className="login-container">
@@ -82,7 +76,6 @@ const Login = () => {
               Login
             </button>
           </div>
-          <div>{loginStatus}</div>
         </form>
       </div>
     </div>
