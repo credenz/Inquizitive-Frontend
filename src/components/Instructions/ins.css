@@ -7,6 +7,7 @@
     left:50%;
     transform:translate(-50%,0);
     overflow: scroll;
+    border-radius: 20px;
 
     /* left: 50%;
     transform: translate(-50%, -50%); */ 
@@ -40,6 +41,7 @@
   }
 .text {
   margin: 40px 20px 40px 20px;
+  font-size: 1.2rem;
 }
 .pisb {
   height: 60px;

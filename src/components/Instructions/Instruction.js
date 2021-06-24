@@ -4,6 +4,7 @@ import "./ins.css";
 import ctd from "../../images/ctd.png";
 import pisb from "../../images/PISB.png";
 import inquzi from "../../images/inquizitive.png";
+import Footer from "../Home/Footer/Footer";
 const Instruction = () => {
   const [isActive, setActive] = useState(false);
   const [dest, setDest] = useState("/ins");
@@ -108,10 +109,10 @@ const Instruction = () => {
             <div className="">
               <p className="text">
                 <ol>
-                  <li>Before starting the quiz, make sure that you have a stable network.</li>
-                  <li>Every participant can sign in only once. Once completed, you won't be able to sign in again.</li>
+                  <li>Before starting the quiz, make sure that you have a <b>stable network.</b></li>
+                  <li>Every participant can sign in <b>only once</b>. Once completed, you won't be able to sign in again.</li>
                   <li>Each question has a set time after which you won't be able to answer nor come back to it later again.</li>
-                  <li>You can end test at any time using 'End Test' button.</li>
+                  <li>You can end test at any time using <b>'End Test'</b> button.</li>
                   <li>Participants should not make spelling mistakes while writing answers, they will be considered as wrong answers.</li>
                 </ol>
               </p>
@@ -135,11 +136,7 @@ const Instruction = () => {
             </div>
           </main>
         </div>
-        <footer className="page-footer black ">
-          <p className="center ">
-            © PICT IEEE Student Branch | Developed by PISB Web Team
-          </p>
-        </footer>
+        <Footer />
         {/* <footer className="page-footer grey darken-4 hide-on-mid-and-down"></footer> */}
       </div>
     </div>

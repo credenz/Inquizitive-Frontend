@@ -4,6 +4,7 @@ import './Endpage.css'
 import ctd from "../../images/ctd.png";
 import pisb from "../../images/PISB.png";
 import inquzi from "../../images/inquizitive.png";
+import Footer from '../Home/Footer/Footer';
 const Endpage = () => {
     return (
       <div>
@@ -69,11 +70,7 @@ const Endpage = () => {
             </div>
           </main>
         </div>
-        <footer className="page-footer black ">
-          <p className="center ">
-            © PICT IEEE Student Branch | Developed by PISB Web Team
-          </p>
-        </footer>
+        <Footer />
       </div>
     );
 }
