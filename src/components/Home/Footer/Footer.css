@@ -2,9 +2,14 @@
     bottom: 0px;
     background: black;
     color: white;
-    padding: 0.5rem;
+    padding: 1.2rem;
     text-decoration: none;
     text-align: center;
     position: fixed;
     width: 100%;
   }
+
+.webteam {
+    color: #007BFF;
+    cursor: pointer;
+}
