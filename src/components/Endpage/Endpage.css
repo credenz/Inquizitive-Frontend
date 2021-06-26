@@ -1,0 +1,29 @@
+.endpage-cont{
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 75px;
+    background-image: url(../../images/questionbg.jpg);
+}
+.wrt-text{
+    color: white;
+}
+.tick{
+    display: block;
+    
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+
+}
+
+.endpage{
+    position: relative;
+    top : 20px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.486);
+    margin-bottom: 90px !important;
+    border-radius: 20px;
+}
