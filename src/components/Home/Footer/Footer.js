@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Footer.css";
-<<<<<<< Updated upstream
 import {
   Modal,
   ModalHeader,
@@ -8,9 +7,6 @@ import {
   Button,
 } from "reactstrap";
 import Ourteam from "../../ourteam_modal/Ourteam.js";
-=======
-
->>>>>>> Stashed changes
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
