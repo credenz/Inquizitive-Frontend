@@ -1,22 +1,12 @@
 import React from "react";
+import { Col, Container, Navbar, Row } from "reactstrap";
 import Tick from "../../images/check.png";
-import "./Endpage.css";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Navbar,
-  NavbarBrand,
-  Row,
-} from "reactstrap";
 import ctdlogo from "../../images/ctd.png";
-import PISB from "../../images/IEEE White.png";
 import Inq from "../../images/inquizitive.png";
+import PISB from "../../images/PISB.png";
 import Footer from "../Home/Footer/Footer";
+import "./Endpage.css";
+
 const Endpage = () => {
   return (
     // <div>
@@ -108,22 +98,20 @@ const Endpage = () => {
         <Col>
           <Row>
             <Col>
-              <img className="tick center" src={Tick} />
+              <img className="tick center" alt='green tick' src={Tick} />
             </Col>
           </Row>
           <Row>
             <Col>
               <div className="wrt-text text-center">
-                <h3>YOUR RESPONSE WAS SUBMITTED SUCCESSFULLY</h3>
-                <h3>THANK YOU </h3>
+                <div>YOUR RESPONSE WAS SUBMITTED SUCCESSFULLY.</div>
+                <b>THANK YOU !</b>
               </div>
             </Col>
           </Row>
         </Col>
       </Container>
-      <footer className="foot">
-        © PICT IEEE Student Branch | Developed by PISB Web Team
-      </footer>
+      <Footer />
     </div>
   );
 };

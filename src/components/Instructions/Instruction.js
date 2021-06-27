@@ -1,21 +1,12 @@
 import React, { useState } from "react";
-import { Router, Link } from "react-router-dom";
-import "./in.css";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Navbar,
-  NavbarBrand,
-  Row,
-} from "reactstrap";
+import { Link } from "react-router-dom";
+import { Col, Container, Navbar, Row } from "reactstrap";
 import ctdlogo from "../../images/ctd.png";
-import PISB from "../../images/IEEE White.png";
 import Inq from "../../images/inquizitive.png";
+import PISB from "../../images/PISB.png";
+import Footer from "../Home/Footer/Footer";
+import "./in.css";
+
 const Instruction = () => {
   const [isActive, setActive] = useState(false);
   const [dest, setDest] = useState("/ins");
@@ -30,7 +21,7 @@ const Instruction = () => {
   };
 
   return (
-    
+
     <div>
       <Navbar fixed="top" color="" dark className="MyNavs">
         <div className="d-none d-md-block">
@@ -51,7 +42,6 @@ const Instruction = () => {
         </div>
       </Navbar>
       <Container className="main-cont border border-dark ">
-        <Col>
           <Row>
             <Col>
               <h2 className="mt-4 text-center">INSTRUCTIONS</h2>
@@ -60,37 +50,14 @@ const Instruction = () => {
           <hr className="solid" />
           <Row>
             <Col>
-              <p className="mt-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                // et ipsum blanditiis culpa iure odit nihil alias vero nesciunt
-                // quisquam a neque corporis doloremque quasi natus, sit dolorum
-                // reiciendis laborum laboriosam fugit? Ipsam, vel ipsum? Esse,
-                // reiciendis, facilis suscipit doloremque praesentium officia
-                // fugiat placeat repellendus dignissimos repellat eveniet sed.
-                // Minima. Lorem ipsum dolor sit, amet consectetur adipisicing
-                // elit. At repudiandae quod consectetur magnam repellat
-                aliquam! // Perspiciatis libero est facere, unde quas ipsum
-                beatae repellat // praesentium eligendi ratione delectus sequi
-                corrupti. Lorem // ipsum dolor sit amet consectetur adipisicing
-                elit. Veritatis // voluptas quas unde illo aliquam, ullam
-                provident a aperiam // adipisci quis ut voluptate. Repellendus
-                sunt hic ex, error quam // vero optio recusandae illo debitis ad
-                molestias, harum nostrum // saepe, soluta aperiam? Lorem, ipsum
-                dolor sit amet consectetur // adipisicing elit. Saepe et ipsum
-                blanditiis culpa iure odit // nihil alias vero nesciunt quisquam
-                a neque corporis doloremque // quasi natus, sit dolorum
-                reiciendis laborum laboriosam fugit? // Ipsam, vel ipsum? Esse,
-                reiciendis, facilis suscipit doloremque // praesentium officia
-                fugiat placeat repellendus dignissimos // repellat eveniet sed.
-                Minima. Lorem ipsum dolor sit, amet // consectetur adipisicing
-                elit. At repudiandae quod consectetur // magnam repellat
-                aliquam! Perspiciatis libero est facere, unde // quas ipsum
-                beatae repellat praesentium eligendi ratione delectus // sequi
-                corrupti. Lorem ipsum dolor sit amet consectetur // adipisicing
-                elit. Veritatis voluptas quas unde illo aliquam, // ullam
-                provident a aperiam adipisci quis ut voluptate. // Repellendus
-                sunt hic ex, error quam vero optio recusandae illo // debitis ad
-                molestias, harum nostrum saepe, soluta aperiam?
+              <p className="mt-4 ml-4">
+                <ol>
+                  <li>Before starting the quiz, make sure that you have a <b>stable network.</b></li>
+                  <li>Every participant can sign in <b>only once</b>. Once completed, you won't be able to sign in again.</li>
+                  <li>Each question has a set time after which you won't be able to answer nor come back to it later again.</li>
+                  <li>You can end test at any time using <b>'End Test'</b> button.</li>
+                  <li>Participants should not make spelling mistakes while writing answers, they will be considered as wrong answers.</li>
+                </ol>
               </p>
             </Col>
           </Row>
@@ -101,7 +68,7 @@ const Instruction = () => {
                 <div class="boxes ">
                   <input type="checkbox" onChange={handleChecked} id="box-3" />
                   <label for="box-3">
-                    <h5>I have read all instructions carefully</h5>
+                    <h5>I have read all the instructions carefully</h5>
                   </label>
                 </div>
                 <Link to={dest}>
@@ -116,11 +83,8 @@ const Instruction = () => {
               </div>
             </Col>
           </Row>
-        </Col>
       </Container>
-      <footer className="foot">
-        © PICT IEEE Student Branch | Developed by PISB Web Team
-      </footer>
+      <Footer />
     </div>
   );
 };
