@@ -50,20 +50,65 @@ const Ourteam = ()=>{
             </div>
             <div class="row pb-5">
                 <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
-                    <Card imgsrc={rick} name='Rick Sanchez'/>
+                    <Card imgsrc={require('../../images/iliyas.jpeg').default} 
+                    team = 'Back-end developer' 
+                    name='Ilyas Ali' 
+                    github='https://github.com/ilyas-ali/' 
+                    linkedin='https://www.linkedin.com/in/ilyas-ali-7730a31a0' 
+                    mail='mailto:ilyashussain14@gmail.com'
+                    />
                 </div>
 
                 <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
-                    <Card imgsrc={rick} name='Rick Sanchez'/>
-                </div>
-
-                <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
-                    <Card imgsrc={rick} name='Rick Sanchez'/>
+                    <Card imgsrc={require('../../images/aman.jpeg').default} 
+                    team = 'Back-end developer' 
+                    name='Amaan Naikwadi' 
+                    github='https://github.com/AmaanNaikwadi' 
+                    linkedin='https://www.linkedin.com/in/amaan-naikwadi-022523151' 
+                    mail='mailto:amaannaikwadi@gmail.com'
+                    />
                 </div>
                 
                 <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
-                    <Card imgsrc={rick} name='Rick Sanchez'/>
+                    <Card imgsrc={require('../../images/sameer.jpeg').default} 
+                    team = 'Back-end developer' 
+                    name='Sameer Memon' 
+                    github='https://github.com/sameer1604' 
+                    linkedin='https://www.linkedin.com/in/sameer-memon-0019ab1a9' 
+                    mail='mailto:memonsameer4@gmail.com'
+                    />
                 </div>
+                <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
+                    <Card imgsrc={require('../../images/avantika.jpeg').default} 
+                    team = 'Questions Setter' 
+                    name='Avantika Patil' 
+                    mail='mailto:patilavantika168@gmail.com'
+                    />
+                </div>
+            </div>
+            <div class="row pb-5">
+                
+
+                <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
+                    <Card imgsrc={require('../../images/atharva.jpeg').default} 
+                    team = 'Questions Setter' 
+                    name='Atharva Savdekar' 
+                    github='https://github.com/atharvas21' 
+                    linkedin='https://www.linkedin.com/in/atharva-savdekar-981886191/' 
+                    mail='mailto:atharvasavdekar21@gmail.com'
+                    />
+                </div>
+
+                <div class="col-lg-3 col-md-4 pl-4 pr-4 py-5">
+                    <Card imgsrc={require('../../images/abhishek.jpeg').default} 
+                    team = 'Questions Setter' 
+                    name='Abhishek Kulkarni' 
+                    github='https://github.com/abhishekkulkarni59' 
+                    linkedin='https://www.linkedin.com/in/abhishek-kulkarni-3b848129' 
+                    mail='mailto:abhishekkulkarni59@gmail.com'
+                    />
+                </div>
+            
             </div>
         </div>
     </section>

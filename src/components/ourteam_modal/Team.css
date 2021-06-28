@@ -28,9 +28,8 @@ font-weight: bold;
 }
 
 h3 {
-font-size: 22px;
+font-size: 21px;
 color: rgb(0, 0, 0);
-font-weight: bold;
 }
 
 #team i {
@@ -48,6 +47,7 @@ box-shadow: 5px 5px 15px #dddfd4;
 transition: all 0.3s ease-in;
 -webkit-transition: all 0.3s ease-in;
 -moz-transition: all 0.3s ease-in;
+border: 0;
 }
 
 #team .card:hover {
@@ -58,10 +58,20 @@ border: none;
 box-shadow: 5px 5px 10px #9e9e9e;
 }
 
-#team .card:hover h3,
-#team .card:hover i {
-color: #173e43;
+#team .card:hover h3,#team .card:hover i{
+    color: #173e43;
 }
+#team i:hover {
+display: inline-block;
+animation: rotation 0.35s linear;
+}
+
+@keyframes rotation {
+    to{
+      transform: rotate(360deg);
+    }
+    
+  }
 
 /* Modal sizing */
 @media (min-width: 576px){
@@ -77,6 +87,11 @@ color: #173e43;
 .close {
     font-size: 3.2rem;
     
+}
+.card-img-top{
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
 }
 
 .close:hover {

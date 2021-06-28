@@ -8,16 +8,16 @@ const Card = props =>{
     return(
     <div class="card h-60 .mx-auto">
         <div class="card-body">
-            <img class="img-fouild rounded w-100 mb-4"
+            <img class="img-fouild w-100 card-img-top rounded mb-4"
                 src={props.imgsrc}
                 alt="Sophie"></img>
             <h3>{props.name}</h3>
-            <h5>{props.team}</h5>
+            {/* <p style={{'font-size': '2.5vh'}}>{props.team}</p> */}
             {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p> */}
             <div class="d-flex flex-row justify-content-center">
                 <div class="p-2">
                     <a target="_blank" style={{cursor : 'Pointer'}}  className="github" href={props.github}>
-                        <i><FaGithub/></i>
+                        <i ><FaGithub/></i>
                     </a>
                 </div>
                 <div class="p-2">
@@ -29,7 +29,7 @@ const Card = props =>{
                 <div class="p-2">
                     <a target="_blank" style={{cursor : 'Pointer'}} className="linkedin" href={props.mail}>
                         <FontAwesomeIcon icon={["fab", "email"]} />
-                        <i ><FaEnvelope/></i>
+                        <i><FaEnvelope/></i>
                     </a>
                 </div>
             </div>
