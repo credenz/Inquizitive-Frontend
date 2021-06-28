@@ -4,7 +4,7 @@ import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 import "./Logincopy.css";
 import Axios from "axios";
-import DjangoServerUrl from "../../../urls";
+import DjangoServer from "../../../urls";
 
 const Login = () => {
   const history = useHistory();
@@ -21,7 +21,7 @@ const Login = () => {
       password: password,
     };
 
-    Axios.post(DjangoServerUrl + "api/login/", data)
+    DjangoServer.post( "api/login/", data)
       .then((res) => {
         const token = res.data.token;
         localStorage.setItem("jwtToken", token);
@@ -32,9 +32,8 @@ const Login = () => {
         console.log(localStorage.getItem("jwtToken"));
       })
       .catch((err) => {
-        console.log(err);
-        console.log(JSON.stringify(err));
-        alert(err.message);
+        if(err.response && err.response.status === 500) alert("Session expired. You have already attempted the quiz.");
+        else alert(err.message);
       });
   };
 

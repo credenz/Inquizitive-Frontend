@@ -6,7 +6,7 @@ import { Button, Col, Container, Form, FormGroup, Input, Label, Navbar, Row, Spi
 import ctdlogo from "../../images/ctd.png";
 import Inq from "../../images/inquizitive.png";
 import PISB from "../../images/PISB.png";
-import DjangoServerUrl from '../../urls';
+import DjangoServer from '../../urls';
 import './QuestionComponent.css';
 
 function Question() {
@@ -19,8 +19,8 @@ function Question() {
     useEffect(() => {
         setSending(true);
         let token = localStorage.getItem('jwtToken');
-        axios.get(DjangoServerUrl + 'quiz/question/', {
-            headers: { 'Authorization': 'token ' + token, 'Content-Type': 'application/json' }
+        DjangoServer.get( 'quiz/question/', {
+            headers: { 'Authorization': 'token ' + token }
         })
             .then((res) => {
                 if (res.status === 200) {
@@ -42,15 +42,15 @@ function Question() {
         if (e) e.preventDefault();
         let token = localStorage.getItem('jwtToken');
         setSending(true);
-        axios.post(DjangoServerUrl + 'quiz/response/', { "answer": ans }, {
-            headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
+        DjangoServer.post( 'quiz/response/', { "answer": ans }, {
+            headers: { "Authorization": "token " + token }
         })
             .then((res) => {
                 if (res.status === 200) {
-                    if (res.data === 'logout') {
+                    if (res.data === 'logout' || End) {
                         setRedirect(1);
-                        axios.post(DjangoServerUrl + 'api/logout/', {}, {
-                            headers: { "Authorization": "token " + token, "Content-Type": "application/json" }
+                        DjangoServer.post( 'api/logout/', {}, {
+                            headers: { "Authorization": "token " + token }
                         }).then().catch(e => alert(e));
                     } else {
                         setTitle(res.data.data.number_of_question_solved);
@@ -111,13 +111,7 @@ function Question() {
                     </Row>
 
                     <Navbar fixed='bottom' color='black' dark expand="md" className='MyNavs'>
-                        <Button onClick={() => {
-                            send();
-                            setRedirect(1);
-                            axios.post(DjangoServerUrl + 'api/logout/', {}, {
-                                headers: { "Authorization": "token " + localStorage.getItem('jwtToken'), "Content-Type": "application/json" }
-                            }).then(r => console.log(r)).catch(e => alert(e));
-                        }} color='danger' className='ml-auto'>End Test</Button>
+                        <Button onClick={() => { send(false, true); }} color='danger' className='ml-auto'>End Test</Button>
                     </Navbar>
                 </Container>
                 <Container className='formcont position-fixed fixed-bottom' >
