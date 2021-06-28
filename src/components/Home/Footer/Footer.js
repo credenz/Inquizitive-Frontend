@@ -14,10 +14,11 @@ const Footer = () => {
   return (
     <div>
       <footer className="foot">
-        <div className='row justify-content-center'>© PICT IEEE Student Branch | Developed by PISB&nbsp;<span className='webteam' onClick={() => setIsOpen(!isOpen)} > Web&nbsp;Team</span>.</div>
+        <div className='row justify-content-center'>© PICT IEEE Student Branch | Developed by &nbsp;<span className='webteam' onClick={() => setIsOpen(!isOpen)} > PISB Web&nbsp;Team</span></div>
       </footer>
       <Modal scrollable={true} className="modal-dialog" isOpen={isOpen} toggle={() => setIsOpen(!isOpen)}>
-        <ModalHeader  className="modal-head" toggle={() => setIsOpen(!isOpen)}>
+        <ModalHeader className="modal-head" toggle={() => setIsOpen(!isOpen)}>
+          Meet Our Team
         </ModalHeader>
         <ModalBody >
           <Ourteam/>
