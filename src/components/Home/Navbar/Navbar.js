@@ -31,7 +31,7 @@ const Nav = () => {
       >
         <div className="navbar-nav">
           <NavLink
-            to="/ins"
+            to="/instructions"
             className="newnav-item  w-5 m-3 p-0"
             style={{'textDecoration': 'none'}}
           >

@@ -23,17 +23,15 @@ const Login = () => {
 
     DjangoServer.post( "api/login/", data)
       .then((res) => {
-        const token = res.data.token;
-        localStorage.setItem("jwtToken", token);
-        Axios.defaults.headers["Authorization"] =
-          "Token " + localStorage.getItem("jwtToken");
-        history.push("/ins");
-        console.log(res.status);
-        console.log(localStorage.getItem("jwtToken"));
+        if(res.data.attempted) alert("You have already attempted the quiz.");
+        else {
+          const token = res.data.token;
+          localStorage.setItem("jwtToken", token);
+          history.push("/ins");
+        }
       })
       .catch((err) => {
-        if(err.response && err.response.status === 500) alert("Session expired. You have already attempted the quiz.");
-        else alert(err.message);
+        alert(err.message);
       });
   };
 

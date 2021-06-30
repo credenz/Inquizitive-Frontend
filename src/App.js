@@ -9,6 +9,7 @@ import "./App.css";
 import Question from "./components/Question/QuestionComponent";
 import Endpage from "./components/Endpage/Endpage";
 import Instruction from "./components/Instructions/Instruction";
+import InsWithoutProceed from "./components/Instructions/InsWithoutProceed";
 const App = () => {
   return (
     <Router>
@@ -24,6 +25,9 @@ const App = () => {
         </Route>
         <Route exact path="/ins">
           <Instruction/>
+        </Route>
+        <Route exact path="/instructions">
+          <InsWithoutProceed />
         </Route>
         <Redirect/>
       </Switch>

@@ -6,8 +6,8 @@ const CTD = () => {
             <div className="brand-logo-container">
                 <img src={Inq} className='brand-logo' alt="" />
             </div>
-            <h1>InQuizitive</h1>
-            <h6>A platform that feeds upon curiosity</h6>
+            <div className='Head' >InQuizitive</div>
+            <div className='SubHead' >A platform that feeds upon curiosity</div>
         </div>
     )
 }

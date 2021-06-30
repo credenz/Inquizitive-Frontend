@@ -14,7 +14,8 @@ function Question() {
     const [title, setTitle] = useState(0);
     const [description, setDescription] = useState(' ');
     const [ans, setAns] = useState("");
-    const [sending, setSending] = useState(false);
+    const [sending, setSending] = useState(true);
+    const [time, setTime] = useState(30);
 
     useEffect(() => {
         setSending(true);
@@ -27,6 +28,7 @@ function Question() {
                     if (res.data === 'logout') {
                         setRedirect(1);
                     } else {
+                        setTime(res.data.data.time_rem);
                         setTitle(res.data.data.number_of_question_solved);
                         setDescription(res.data.data.description);
                         setSending(false);
@@ -53,6 +55,7 @@ function Question() {
                             headers: { "Authorization": "token " + token }
                         }).then().catch(e => alert(e));
                     } else {
+                        setTime(res.data.data.time_rem);
                         setTitle(res.data.data.number_of_question_solved);
                         setDescription(res.data.data.description);
                         setAns("");
@@ -87,6 +90,7 @@ function Question() {
                                     onComplete={() => { send(); }}
                                     isPlaying
                                     duration={30}
+                                    initialRemainingTime={time}
                                     size={75}
                                     strokeWidth={8}
                                     trailColor={'rgba(255,255,255,0.3)'}
@@ -97,7 +101,7 @@ function Question() {
                                         ['#A30000', 0.33],
                                     ]}
                                 >
-                                    {({ remainingTime }) => <h2>{remainingTime}</h2>}
+                                    {({ remainingTime }) => sending ? <h2>--</h2> : <h2>{remainingTime}</h2>}
                                 </CountdownCircleTimer>
                             </div>
                         </Col>
