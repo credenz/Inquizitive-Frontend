@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Redirect } from 'react-router';
@@ -7,6 +6,7 @@ import ctdlogo from "../../images/ctd.png";
 import Inq from "../../images/inquizitive.png";
 import PISB from "../../images/PISB.png";
 import DjangoServer from '../../urls';
+import BackGround from '../Home/Background/Background';
 import './QuestionComponent.css';
 
 function Question() {
@@ -20,7 +20,7 @@ function Question() {
     useEffect(() => {
         setSending(true);
         let token = localStorage.getItem('jwtToken');
-        DjangoServer.get( 'quiz/question/', {
+        DjangoServer.get('quiz/question/', {
             headers: { 'Authorization': 'token ' + token }
         })
             .then((res) => {
@@ -44,14 +44,14 @@ function Question() {
         if (e) e.preventDefault();
         let token = localStorage.getItem('jwtToken');
         setSending(true);
-        DjangoServer.post( 'quiz/response/', { "answer": ans }, {
+        DjangoServer.post('quiz/response/', { "answer": ans }, {
             headers: { "Authorization": "token " + token }
         })
             .then((res) => {
                 if (res.status === 200) {
                     if (res.data === 'logout' || End) {
                         setRedirect(1);
-                        DjangoServer.post( 'api/logout/', {}, {
+                        DjangoServer.post('api/logout/', {}, {
                             headers: { "Authorization": "token " + token }
                         }).then().catch(e => alert(e));
                     } else {
@@ -73,6 +73,7 @@ function Question() {
     } else {
         return (
             <div className='backgd'>
+                <BackGround />
                 <Navbar fixed='top' color='' dark className='MyNavs' >
                     <div className='d-none d-md-block'><img alt='logo' src={ctdlogo} width='75px' ></img></div>
                     <div className='name' ><img src={Inq} className='inqzlogo' alt="" width='50px' height='50px' /><strong> INQUIZITIVE</strong></div>
@@ -114,7 +115,8 @@ function Question() {
                         </Col>
                     </Row>
 
-                    <Navbar fixed='bottom' color='black' dark expand="md" className='MyNavs'>
+                    <Navbar fixed='bottom' color='black' dark expand="md" className='MyNavs botnav'>
+                        <div className='align-text-center'>© PICT IEEE Student Branch | Developed by PISB Web Team</div>
                         <Button onClick={() => { send(false, true); }} color='danger' className='ml-auto'>End Test</Button>
                     </Navbar>
                 </Container>
