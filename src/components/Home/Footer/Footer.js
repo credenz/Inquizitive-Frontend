@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import "./Footer.css";
 import {
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Button,
+  Modal, ModalBody, ModalHeader
 } from "reactstrap";
 import Ourteam from "../../ourteam_modal/Ourteam.js";
+import "./Footer.css";
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <div>
       <footer className="foot">
@@ -21,7 +18,7 @@ const Footer = () => {
           Meet Our Team
         </ModalHeader>
         <ModalBody >
-          <Ourteam/>
+          <Ourteam />
         </ModalBody>
       </Modal>
     </div>

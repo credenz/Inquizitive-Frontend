@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Col, Container, Navbar, Row } from "reactstrap";
 import ctdlogo from "../../images/ctd.png";
@@ -52,21 +52,21 @@ const InsWithoutProceed = () => {
             </p>
           </Col>
         </Row>
-        <hr className="solid"/>
+        <hr className="solid" />
         <Row>
-            <Col>
-              <div className="text-center mt-3">
-                <Link to='/'>
-                  <button
-                    type="button"
-                    class="text-center submit-btn mt-2 mb-4 btn btn-success btn-lg"
-                  >
-                    Go back to Home page
-                  </button>
-                </Link>
-              </div>
-            </Col>
-          </Row>
+          <Col>
+            <div className="text-center mt-3">
+              <Link to='/'>
+                <button
+                  type="button"
+                  class="text-center submit-btn mt-2 mb-4 btn btn-success btn-lg"
+                >
+                  Go back to Home page
+                </button>
+              </Link>
+            </div>
+          </Col>
+        </Row>
       </Container>
       <Footer />
     </div>
