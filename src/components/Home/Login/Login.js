@@ -1,90 +1,82 @@
-import React, { useState } from 'react';
-import Inq from "../../../images/inquizitive.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKey, faUser } from '@fortawesome/free-solid-svg-icons'
-import './Login.css';
-import axios from 'axios';
+import { faKey, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Axios from "axios";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import DjangoServer from "../../../urls";
+import "./Logincopy.css";
+
 const Login = () => {
+  const history = useHistory();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [loginStatus, setLoginStatus] = useState('');
-
-  axios.defaults.withCredentials = true;
-
+  Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
-    axios.post("http://127.0.0.1:8000/api/login", {
+    e.preventDefault();
+
+    const data = {
       username: username,
       password: password,
-    })
-      .then(res => {
-        if (!res.data.message) {
-          setLoginStatus(res.data.message);
-        } else {
-          console.log(res.data);
-          setLoginStatus(res.data[0].username);
-        };
-      })
+    };
 
-      .catch(err => {
-        console.log(err);
+    DjangoServer.post("api/login/", data)
+      .then((res) => {
+        if (res.data.attempted) alert("You have already attempted the quiz.");
+        else {
+          const token = res.data.token;
+          localStorage.setItem("jwtToken", token);
+          history.push("/ins");
+        }
       })
-  }
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
 
   return (
-    <div className="container">
-      <div className="d-flex justify-content-center h-100 loggin">
-        <div className="user_card">
-          <div className="d-flex justify-content-center">
-            <div className="brand_logo_container">
-              <img src={Inq} className="brand_logo" alt="Logo" />
+    <div className="login-container">
+      <div className="login-title">Sign In</div>
+      <div className="login-form">
+        <form onSubmit={handleSubmit}>
+          <div className="input-group mb-3">
+            <div className="input-group-append">
+              <span className="input-group-text">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
             </div>
+            <input
+              type="text"
+              className="form-control input_user"
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
           </div>
-          <div className="form_container">
-            {/* <form> */}
-            <label className='d-flex justify-content-center text-light'> Username </label>
-            <div className="input-group mb-3">
-              <div className="input-group-append">
-                <span className="input-group-text">
-                  <FontAwesomeIcon icon={faUser} />
-                </span>
-              </div>
-              <input
-                type="text"
-                className="form-control input_user"
-                placeholder="Username"
-                onChange={e => setUsername(e.target.value)}
-              />
+          <div class="input-group mb-3">
+            <div className="input-group-append">
+              <span className="input-group-text">
+                <FontAwesomeIcon icon={faKey} />
+              </span>
             </div>
-            <label className='d-flex justify-content-center text-light'> Password </label>
-            <div class="input-group mb-3">
-              <div className="input-group-append">
-                <span className="input-group-text">
-                  {/* <i className="fas fa-user"></i> */}
-                  <FontAwesomeIcon icon={faKey} />
-                </span>
-              </div>
-              <input
-                type="password"
-                className="form-control input_pass"
-                placeholder="Password"
-                onChange={e => setPassword(e.target.value)}
-              />
-            </div>
-
-            <div className="d-flex justify-content-center mt-3 login_container">
-              <button onClick={handleSubmit} type="button" name="button" className="btn login_btn">
-                Login
-              </button>
-            </div>
-            <h1>{loginStatus}</h1>
-            {/* </form> */}
+            <input
+              type="password"
+              className="form-control input_pass"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
-        </div>
+          <div className="login-btn-control">
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Login;

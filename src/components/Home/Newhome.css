@@ -1,0 +1,50 @@
+
+@keyframes animStar {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.dialogue-container {
+  width: 100%;
+  min-height: 80vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-dialogue {
+  height: fit-content;
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 1px 3px 5px 4px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 1px 3px 5px 4px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 1px 3px 5px 4px rgba(0, 0, 0, 0.36);
+  border-radius: 30px;
+  padding: 30px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+}
+
+.team-link:hover{
+  text-decoration: none;
+  filter: brightness(200%);
+  font-weight: bold;
+}
+
+
+@media (max-width: 800px) {
+  .home-dialogue {
+    margin-bottom: 150px;
+  }
+  .top {
+    margin-bottom: 20px;
+  }
+}

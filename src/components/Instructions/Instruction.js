@@ -1,5 +1,5 @@
-import React from 'react'
-import { Router, Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 const Instruction = () => {
     const handleChecked = (e) => {
         console.log(e);
@@ -23,14 +23,14 @@ const Instruction = () => {
                     <label >
                         <input type="checkbox" id="mycheck" onClick={handleChecked} />
                         <span> I have read all instructions carefully
-                    </span>
+                        </span>
                     </label>
                 </p>
                 <div className="center">
                     <Link to="/endpage">
                         <button className="btn waves-effect waves-light" disabled={false}>
                             Proceed
-                    </button>
+                        </button>
                     </Link>
                 </div>
 

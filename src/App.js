@@ -1,15 +1,13 @@
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
+  BrowserRouter as Router, Redirect, Route,
+  Switch
 } from "react-router-dom";
-import Home from "./components/Home/Home";
 import "./App.css";
-import Instructions from "./components/Instructions/Instructions";
-import Question from "./components/Question/QuestionComponent";
 import Endpage from "./components/Endpage/Endpage";
+import Home from "./components/Home/Home";
 import Instruction from "./components/Instructions/Instruction";
+import InsWithoutProceed from "./components/Instructions/InsWithoutProceed";
+import Question from "./components/Question/QuestionComponent";
 const App = () => {
   return (
     <Router>
@@ -17,19 +15,19 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/instructions">
-          <Instructions />
-        </Route>
         <Route exact path="/questions">
-          <Question/>
+          <Question />
         </Route>
         <Route exact path="/endpage">
-          <Endpage/>
+          <Endpage />
         </Route>
         <Route exact path="/ins">
-          <Instruction/>
+          <Instruction />
         </Route>
-        <Redirect/>
+        <Route exact path="/instructions">
+          <InsWithoutProceed />
+        </Route>
+        <Redirect />
       </Switch>
     </Router>
   );

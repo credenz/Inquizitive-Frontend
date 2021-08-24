@@ -1,5 +1,5 @@
-import './CTD.css';
 import ctdLogo from "../../../images/ctd.png";
+import './CTD.css';
 
 const CTD = () => {
     return (

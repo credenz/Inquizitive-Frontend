@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
     margin: 0;
     padding: 0;
     background-size: cover;
-    font-family: Quicksand;
-    background: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    /* background: rgb(0, 0, 0); */
+    /* background-color: rgba(1, 15, 53, 0.404) !important; */
+    background: rgb(0, 0, 29);
     overflow-x: hidden;
 }

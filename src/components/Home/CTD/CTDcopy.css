@@ -1,0 +1,35 @@
+.ctdlogo{
+    height: 100%;
+}
+
+.brand-logo-container {
+    height: 120px;
+    width: 100%;
+    top: 25px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 45px;
+} 
+
+.brand-logo{
+    height: 100%;
+    width: auto;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.Head {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.SubHead {
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    font-style: italic;
+    text-align: center;
+}

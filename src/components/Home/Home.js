@@ -1,16 +1,14 @@
-import Login from './Login/Login';
 import BackGround from './Background/Background';
+import CTD from './CTD/CTD';
 import './Home.css';
-
+import Login from './Login/Login';
 // import "../App.css";
 // import React,{useState, SyntheticEvent} from "react"
 // import {Redirect} from 'react-router-dom';
-
 // const Home = () => {
 //   const [username, setUsername] = useState('Rohit');
 //   const [password, setPassword] = useState('ronda');
 //   const [redirect, setRedirect] = useState(false);
-
 //   const submit = async (e: SyntheticEvent) => {
 //     e.preventDefault();
 //     await fetch('http://localhost:8000/api/users', {
@@ -24,11 +22,9 @@ import './Home.css';
 //     });
 //     setRedirect(true);
 //   }
-
 //   if (redirect) {
 //     return <Redirect to="/instructions"/>
 //   }
-
 //   return (
 //     <form onSubmit={submit}>
 //       <label>Username</label>
@@ -49,9 +45,8 @@ import './Home.css';
 //     </form>
 //   );
 // };
-
 import Navbar from "./Navbar/Navbar";
-import CTD from './CTD/CTD';
+
 
 const Home = () => {
   return (

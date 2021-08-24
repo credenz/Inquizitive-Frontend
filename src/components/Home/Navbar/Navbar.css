@@ -1,0 +1,25 @@
+.newnav {
+  background: black;
+}
+
+.newnav-item:hover {
+  filter: brightness(250%);
+  font-weight: bolder;
+}
+
+.newnav-item {
+  width: 100px;
+  display: flex;
+  color: white;
+  font-weight: bolder;
+}
+
+.logo {
+  filter: brightness(250%);
+}
+
+@media (max-width: 992px) {
+  .newnav {
+    margin-bottom: 60px;
+  }
+}

@@ -1,11 +1,31 @@
+@keyframes animStar {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+}
+
 .name {
     color: white;
+    font-size: 2rem;
 }
 
 .content {
     color: white;
     margin-top: 100px;
     margin-bottom: 75px;
+    max-width: 720px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px -10px 30px -10px rgba(255, 255, 255, 0.4);
+    padding: 20px;
+}
+
+.backgd {
+    min-height: 100vh;
+    overflow: scroll;
 }
 
 .backgd {
@@ -18,10 +38,58 @@
 
 .circletimer {
     float: right;
+    margin-bottom: 10px;
 }
 
 #ans {
     background: rgba(0,0,0,0.6);
     outline: white;
     color: white;
+}
+
+.descp {
+    font-size: x-large;
+    height: calc(100vh - 400px);
+    overflow-y: auto;
+}
+
+.ansform {
+    bottom:0;
+}
+
+.formcont {
+    margin-bottom:75px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 720px;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 10px 30px -10px rgba(255, 255, 255, 0.4);
+    padding: 20px;
+}
+
+.inqzlogo {
+    height: 55px;
+    width: auto;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.MyNavs {
+	background-color: black;
+}
+
+.title {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.quespin {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.subbutt {
+    width: 58px;
+    height: 24px;
 }

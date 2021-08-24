@@ -1,35 +1,55 @@
-import { NavLink } from "react-router-dom"
-import ieeeBlack from '../../../images/ieee_black.png';
-import PISB from '../../../images/PISB.png';
+import "bootstrap/dist/js/bootstrap";
+import "jquery";
+import { NavLink } from "react-router-dom";
+import { NavbarBrand } from "reactstrap";
+import ctdlogo from "../../../images/ctd.png";
+import PISB from "../../../images/PISB.png";
+import "./Navbar.css";
 
-const Navbar = () => {
+const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#asda">
-          <img src={PISB} alt="" className="pic" />
-        </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto flex-nowrap">
-            <li>
-              <NavLink to='/instructions' className='nav-item  w-5 m-3 p-0'> Instructions </NavLink>
-            </li>
-            <li className='nav-item w-5'>
-              <NavLink to='/team' className='m-3 p-0'> Our Team </NavLink>
-            </li>
-            <li className='nav-item w-5 ieee-black'>
-              <img src={ieeeBlack}></img>
-            </li>
-          </ul>
+    <nav
+      className="navbar newnav navbar-expand-lg navbar-dark"
+    >
+      <NavbarBrand href="/">
+        <img src={ctdlogo} className="main-logo" width="75px"></img>
+      </NavbarBrand>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <div className="navbar-nav">
+          <NavLink
+            to="/instructions"
+            className="newnav-item  w-5 m-3 p-0"
+            style={{ 'textDecoration': 'none' }}
+          >
+            Instructions
+          </NavLink>
+          {/* <NavLink
+            to="/team"
+            className="newnav-item m-3 p-0"
+            style={{'textDecoration': 'none'}}
+          >
+            Our Team
+          </NavLink> */}
+          <NavbarBrand>
+            <img src={PISB} width="100px" className="logo" style={{ color: "#ffffff" }}></img>
+          </NavbarBrand>
         </div>
       </div>
-
     </nav>
-  )
-}
-
-export default Navbar;
+  );
+};
+export default Nav;
